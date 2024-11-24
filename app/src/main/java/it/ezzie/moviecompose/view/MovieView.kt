@@ -27,8 +27,6 @@ fun MovieItemView(movie : MovieData) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(8.dp)
-
-
     ){
         Column {
             Image(

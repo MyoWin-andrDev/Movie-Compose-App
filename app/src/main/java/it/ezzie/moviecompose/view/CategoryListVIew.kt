@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,7 +21,7 @@ import it.ezzie.moviecompose.ui.theme.white
 fun CategoryListView(genre : MovieGenre){
     Box(
         modifier = Modifier
-            .fillMaxWidth()
+            .wrapContentSize()
             .padding(8.dp)
             .clip(RoundedCornerShape(16.dp))
             .background(color = darkBlue)
