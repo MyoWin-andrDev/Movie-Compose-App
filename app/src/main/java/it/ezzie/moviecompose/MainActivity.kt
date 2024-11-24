@@ -106,7 +106,7 @@ class MainActivity : ComponentActivity() {
             ),
 
             MovieDetailData(
-                R.drawable.ghostlight, "7. Ghostlight", 2024, "1h 55m", "R", "7.5 (3.7K)", 83
+                R.drawable.histhree, "7. His Three Daughter", 2024, "1h 55m", "R", "7.5 (3.7K)", 83
             ),
 
             MovieDetailData(
@@ -141,7 +141,7 @@ class MainActivity : ComponentActivity() {
                         color = yellow
                     )
 
-                    CustomListView(movieList = items)
+                    CustomListView(movieList = movieDetails)
 
                     Text(
                         text = "Genre",
@@ -157,7 +157,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(8.dp),
                         color = yellow
                     )
-                   CustomTopMovieList(movieDetailList = items)
+                   CustomTopMovieList(movieDetailList = movieDetails)
 
                     Text(
                         text = "Actor",
@@ -180,7 +180,7 @@ fun CustomPosterView(movieList: List<MovieData>){
     }
 }
 @Composable
-fun CustomListView(movieList: List<MovieData>){
+fun CustomListView(movieList: List<MovieDetailData>){
     LazyRow {
         items(movieList){movie ->
             MovieItemView(movie = movie)
@@ -197,10 +197,13 @@ fun CustomCategoryListView(genreList : List<MovieGenre>){
 }
 
 @Composable
-fun CustomTopMovieList(movieDetailList : List<MovieData>){
-    LazyColumn(modifier = Modifier.fillMaxSize()){
-        items(movieDetailList){
-            MovieItemView(movie = it)
+fun CustomTopMovieList(movieDetailList : List<MovieDetailData>){
+    Column(modifier = Modifier
+        .height(600.dp)
+        .verticalScroll(rememberScrollState())
+    ) {
+        movieDetailList.forEach { movieDetailData ->
+            TopMovieView(movieDetail = movieDetailData)
         }
     }
 }

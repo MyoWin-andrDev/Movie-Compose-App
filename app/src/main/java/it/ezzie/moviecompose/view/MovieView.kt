@@ -19,10 +19,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import it.ezzie.moviecompose.R
 import it.ezzie.moviecompose.model.MovieData
+import it.ezzie.moviecompose.model.MovieDetailData
 import it.ezzie.moviecompose.ui.theme.white
 
 @Composable
-fun MovieItemView(movie : MovieData) {
+fun MovieItemView(movie : MovieDetailData) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -30,7 +31,7 @@ fun MovieItemView(movie : MovieData) {
     ){
         Column {
             Image(
-                painter = painterResource(R.drawable.wide),
+                painter = painterResource(movie.image),
                 contentDescription = null,
                 modifier = Modifier
                     .width(100.dp)
@@ -39,7 +40,7 @@ fun MovieItemView(movie : MovieData) {
                 contentScale = ContentScale.Crop
             )
             Text(
-                text = "Title",
+                text = "Movie Title",
                 modifier = Modifier.padding(top = 5.dp),
                 fontSize = 16.sp,
                 color = white

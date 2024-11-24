@@ -25,7 +25,7 @@ fun ActorListView(actor : ActorData){
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(8.dp)
+            .padding(8.dp, bottom = 16.dp)
     ){
         Column (
             modifier = Modifier
