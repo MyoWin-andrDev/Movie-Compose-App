@@ -51,10 +51,10 @@ class MainActivity : ComponentActivity() {
             //MovieData
             val items = listOf(
                 MovieData("Title1", "Description One", R.drawable.wide),
-                MovieData("Title2", "Description Two", R.drawable.wide),
-                MovieData("Title3", "Description Three", R.drawable.wide),
+                MovieData("Title2", "Description Two", R.drawable.wide1),
+                MovieData("Title3", "Description Three", R.drawable.wide3),
                 MovieData("Title4", "Description Four", R.drawable.wide),
-                MovieData("Title5", "Description Five", R.drawable.wide),
+                MovieData("Title5", "Description Five", R.drawable.wide1),
             )
             //Actor Data
             val actors = listOf(

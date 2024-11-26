@@ -24,7 +24,7 @@ fun PosterView(movie : MovieData){
             .padding(30.dp)
     ){
         Image(
-            painter = painterResource(R.drawable.wide),
+            painter = painterResource(movie.image),
             contentDescription = null ,
             modifier = Modifier.fillMaxWidth().height(225.dp).clip(RoundedCornerShape(30.dp))
                 .align(Alignment.Center)

@@ -19,3 +19,4 @@ val darkBlue = Color(0xFF252836)
 val error = Color(0xFFFF4C4C)
 val yellow = Color(0xFFFFC107)
 val linkColor = Color(0xFF007BFF) // A vibrant blue
+
